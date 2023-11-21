@@ -1,5 +1,6 @@
 import HeroMovie from "../../Components/HeroMovie";
 import PrimaryLayout from "../../Components/Layout/PrimaryLayout";
+import MovieList from "../../Components/MovieList";
 
 const HeroData = {
   poster:
@@ -16,6 +17,9 @@ export default function HomePage() {
   return (
     <PrimaryLayout>
       <HeroMovie data={HeroData} />
+      <MovieList title="Spotlight" url="movies" />
+      <MovieList title="Popular TV" url="movies?page=2" />
+      <MovieList title="New On Crackle" url="movies?page=3" />
     </PrimaryLayout>
   );
 }

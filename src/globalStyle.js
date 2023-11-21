@@ -10,6 +10,8 @@ body {
     margin: 0;
     direction: ltr;
     font-family: 'Sora';
+    background: #000;
+    color: #fff;
 }
 ul , ol {
     padding: 0;
