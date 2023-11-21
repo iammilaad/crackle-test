@@ -1,6 +1,11 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
+body, button, input {
+    font-family: Sora;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 body {
     margin: 0;
     direction: ltr;
@@ -17,9 +22,13 @@ ul , ol {
 a {
     text-decoration: none;
 }
+.full-container {
+   width: 100%;
+   padding: 0 16px;
+}
 .container {
    width: 100%;
-   padding: 0 15px;
+   padding: 0 72px;
 }
 .h-full {
     height: 100%;

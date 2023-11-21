@@ -3,6 +3,6 @@ export const pallete = {
   dark: "#131a08",
   borderColor: "#35363b",
   defaultRadius: "10px",
-  defaultBtnColor: "#e0dfde",
+  defaultBtnColor: "#f1dac4",
   whiteColor1: "#eddecb",
 };
