@@ -35,6 +35,9 @@ a {
 .h-full {
     height: 100%;
 }
+.content {
+    padding: 106px 0 50px  0;
+}
 .relative {
     position: relative;
 }

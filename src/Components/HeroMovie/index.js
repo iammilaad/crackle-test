@@ -1,12 +1,19 @@
 import Button from "../uiElements/button";
 import { Style } from "./style";
 
-export default function HeroMovie({ data }) {
+export default function HeroMovie({ data, children }) {
   const { poster, title, age, genres, playLink, infoLink, description } = data;
   return (
-    <Style>
+    <Style className="hero-section">
       <div className="hero-movie">
-        <img className="poster" src={poster} />
+        <div
+          className="poster"
+          style={{
+            backgroundImage:
+              "url(https://us-thumbnail.s3-us-west-1.amazonaws.com/1/7/mm/p6izb_tnl_1920x1080.jpg?ts=20231122192623)",
+          }}
+          src={poster}
+        />
         <div className="content flex align-center h-full relative">
           <div className="container">
             <h1 className="name">{title}</h1>
@@ -29,6 +36,7 @@ export default function HeroMovie({ data }) {
             </div>
           </div>
         </div>
+        <div className="children relative"> {children}</div>
       </div>
     </Style>
   );

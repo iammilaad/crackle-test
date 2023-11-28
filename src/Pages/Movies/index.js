@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { api } from "../../utils/api";
-import Pagination from "../../Components/pagination";
+import { Pagination } from "antd";
 
 export default function Movies() {
   const [data, setData] = useState({
@@ -34,8 +34,8 @@ export default function Movies() {
       );
     });
   }
-  function handlePageClick(e) {
-    getApi(e.selected + 1);
+  function handlePageClick(page, pageSize) {
+    getApi(page);
   }
   return (
     <div className="movies">
@@ -43,9 +43,9 @@ export default function Movies() {
         {renderFarm()}
       </ul>
       <Pagination
-        onPageChange={handlePageClick}
-        itemsPerPage={data.metadata.per_page}
-        pageCount={data.metadata.page_count}
+        onChange={handlePageClick}
+        defaultCurrent={data.metadata.current_page}
+        total={data.metadata.total_count}
       />
     </div>
   );
